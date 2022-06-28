@@ -57,6 +57,7 @@
 
     &__button {
         @include mixins.uploadButton;
+        align-items: center;
 
         @include mixins.tablet {
             display: none;
