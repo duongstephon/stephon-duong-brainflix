@@ -1,0 +1,33 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.searchbar {
+    width: 100%;
+    text-align: end;
+
+    &__typable {
+        font-family: variables.$brainflix-avenir-font, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal;
+        padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+        background-color: #FAFAFA;
+        border: solid 2px variables.$brainflix-mercury;
+        border-radius: 4px;
+        width: 95%;
+        height: 3rem;
+        resize: none;
+        background-image: url('../../assets/icons/search.svg');
+        background-size: 1rem;
+        background-repeat: no-repeat;
+    
+        &:active {
+            border-color: variables.$brainflix-black;
+        }
+    
+        @include mixins.tablet {
+            padding: 1rem;
+        }
+    }
+}

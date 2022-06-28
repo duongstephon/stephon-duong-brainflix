@@ -1,0 +1,74 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.header {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+
+    @include mixins.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        margin: 0rem 5rem;
+    }
+
+    &__logo {
+        width: 9rem; 
+        margin: 1rem;
+
+        @include mixins.tablet {
+            margin: 1.5rem 0rem;
+        }
+    }
+
+    &__avatar-img {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include mixins.tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__search {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mixins.tablet {
+            width: 65%;
+            margin: 0.5rem 0rem;
+            justify-content: flex-end;
+        }
+    }
+
+    &__button {
+        @include mixins.uploadButton;
+
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+
+    &__tablet-button {
+        display: none;
+
+        @include mixins.tablet {
+            display: inline;
+            @include mixins.uploadButton;
+            width: 17rem;
+        }
+    }
+}
