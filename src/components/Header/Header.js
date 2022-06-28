@@ -2,6 +2,7 @@ import './Header.scss'
 import BrainFlixLogo from '../../assets/images/BrainFlix-logo.jpg'
 import AvatarImg from '../../assets/images/Mohan-muruge.jpg'
 import SearchBar from '../SearchBar/SearchBar';
+import UploadImg from '../../assets/icons/upload.svg'
 
 
 const Header = () => {
