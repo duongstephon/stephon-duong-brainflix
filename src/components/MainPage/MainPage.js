@@ -1,23 +1,30 @@
 import React from 'react';
 import './MainPage.scss';
-import videoDetails from '../../data/video-details.json';
-import allVideos from '../../data/videos.json';
+import videoDetailsData from '../../data/video-details.json';
+import videosData from '../../data/videos.json';
 import DisplayedVideo from '../DisplayedVideo/DisplayedVideo';
+import Description from '../Description/Description';
 import Comments from '../Comments/Comments'
-import SuggestedVideos from '../SuggestedVideos/SuggestedVideos';
+import VideoNav from '../VideoNav/VideoNav';
 
 class MainPage extends React.Component {
   state = {
-      otherVideos: allVideos,
-      currentVideo: videoDetails[0]
+      allVideos: videosData,
+      currentVideo: videoDetailsData[0]
   }
 
   render() {
-    console.log(this.state.currentVideo)
+    const videoNavVideos = videosData.filter(video => video.id !== this.state.currentVideo)
+    
       return (
         <div>
           <DisplayedVideo current={this.state.currentVideo}/>
-          <SuggestedVideos videos={this.state.otherVideos} />
+          <section>
+            <div>
+              <Description current={this.state.currentVideo}/>
+            </div>
+            <VideoNav videos={this.state.allVideos} />
+          </section>
         </div>
       );
   };
