@@ -2,7 +2,7 @@
 @use '../../styles/partials/variables.scss';
 @use '../../styles/partials/global.scss' as *;
 
-.suggested-vids {
+.video-nav {
     padding: 1.5rem 1rem;
 
     @include mixins.tablet {
