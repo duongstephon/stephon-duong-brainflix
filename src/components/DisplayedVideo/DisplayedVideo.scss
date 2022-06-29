@@ -1,3 +1,20 @@
 @use '../../styles/partials/mixins.scss';
 @use '../../styles/partials/variables.scss';
 @use '../../styles/partials/global.scss' as *;
+
+.hero {
+    background-color: variables.$brainflix-darkblack;
+    padding: 0;
+
+    @include mixins.tablet {
+        padding: 0rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        padding: 0% 14%;
+    }
+
+    &__video {
+        width: 100%;
+    }
+}
