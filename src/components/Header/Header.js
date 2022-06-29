@@ -3,7 +3,6 @@ import BrainFlixLogo from '../../assets/images/BrainFlix-logo.jpg'
 import AvatarImg from '../../assets/images/Mohan-muruge.jpg'
 import SearchBar from '../SearchBar/SearchBar';
 
-
 const Header = () => {
     return (
         <div className='header'>
