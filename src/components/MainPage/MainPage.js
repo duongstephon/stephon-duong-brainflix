@@ -20,6 +20,15 @@ class MainPage extends React.Component {
     })
   }
 
+  handleDate = (time) => {
+    let date = new Date(time)
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
+    let fullDate = `${month}/${day}/${year}`
+    return fullDate
+}
+
   render() {
     const filteredVideos = videosData.filter(video => video.id !== this.state.currentVideo.id)
     
@@ -28,8 +37,8 @@ class MainPage extends React.Component {
           <DisplayedVideo current={this.state.currentVideo}/>
           <section>
             <div>
-              <Description current={this.state.currentVideo}/>
-              <Comments />
+              <Description current={this.state.currentVideo} handleDate={this.handleDate}/>
+              <Comments current={this.state.currentVideo} handleDate={this.handleDate}/>
             </div>
             <VideoNav 
               current={this.state.currentVideo}
