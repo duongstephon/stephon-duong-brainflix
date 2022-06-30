@@ -4,6 +4,7 @@
 
 .video-nav {
     padding: 1.5rem 1rem;
+    list-style-type: none;
 
     @include mixins.tablet {
         padding: 1.5rem 2.25rem;

@@ -7,14 +7,21 @@ import Description from '../Description/Description';
 import Comments from '../Comments/Comments'
 import VideoNav from '../VideoNav/VideoNav';
 
+// const filteredVideos = 
 class MainPage extends React.Component {
   state = {
       allVideos: videosData,
       currentVideo: videoDetailsData[0]
   }
 
+  handleVideoSelect = id => {
+    this.setState({
+      currentVideo: videoDetailsData.find(video => video.id === id)
+    })
+  }
+
   render() {
-    const videoNavVideos = videosData.filter(video => video.id !== this.state.currentVideo)
+    const filteredVideos = videosData.filter(video => video.id !== this.state.currentVideo.id)
     
       return (
         <div>
@@ -22,8 +29,13 @@ class MainPage extends React.Component {
           <section>
             <div>
               <Description current={this.state.currentVideo}/>
+              <Comments />
             </div>
-            <VideoNav videos={this.state.allVideos} />
+            <VideoNav 
+              current={this.state.currentVideo}
+              videos={filteredVideos} 
+              onVideoSelect={this.handleVideoSelect}
+              />
           </section>
         </div>
       );
