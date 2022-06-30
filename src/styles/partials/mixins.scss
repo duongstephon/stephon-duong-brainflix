@@ -24,3 +24,12 @@
     border-radius: 6px;
     padding: 1rem 0rem;
 }
+
+@mixin comment-section-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: solid 1px #E1E1E1;
+    margin-bottom: 1rem;
+    width: 100%;
+}

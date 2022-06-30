@@ -6,22 +6,13 @@ import likesImg from '../../assets/icons/likes.svg'
 const Description = (props) => {
     const { title, channel, timestamp, views, likes, id, description } = props.current;
 
-    const handleDate = (time) => {
-        let date = new Date(time)
-        let day = date.getDate();
-        let month = date.getMonth()+1;
-        let year = date.getFullYear();
-        let fullDate = `${month}/${day}/${year}`
-        return fullDate
-    }
-
     return (
-        <section className="description">
+        <section className="description" id={id}>
             <h1 className="description__title">{title}</h1>
             <div className="description__box">
                 <div className='description__small-section'>
                     <h3 className="description__channel">By {channel}</h3>
-                    <p className="description__date">{handleDate(timestamp)}</p>
+                    <p className="description__date">{props.handleDate(timestamp)}</p>
                 </div>
                 <div className='description__small-section'>
                     <div className='description__views-likes-box'>
