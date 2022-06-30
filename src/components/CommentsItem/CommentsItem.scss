@@ -1,0 +1,55 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.posted-comments {
+    @include mixins.comment-section-layout;
+
+    @include mixins.tablet {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    @include mixins.desktop {
+        width: 50%;
+    }
+
+    &__image {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 1.5rem 1rem 0rem 0rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 20% 0;
+
+        @include mixins.tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &--posted {
+            margin-top: 0;
+        }
+    }
+
+    &__posted {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        width: 100%;
+
+        @include mixins.tablet {
+            font-size: 1rem;
+        }
+    }
+
+    &__title-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.2rem 0rem 0rem 0rem;
+    }
+}
