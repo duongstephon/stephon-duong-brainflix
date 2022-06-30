@@ -1,29 +1,26 @@
 import React from 'react';
-import allVideos from '../../data/videos.json';
 import './VideoNav.scss'
+import VideoNavItem from '../VideoNavItem/VideoNavItem';
 
-const SuggestedVideos = (props) => {
+const VideoNav = (props) => {
 
-  const handleVideoSelect = e => {
-    e.preventDefault();
-    props.onVideoSelect(props.otherVidoes.id)
-    }
   return (
-    <div className="video-nav"> 
+    <ul className="video-nav"> 
     <h4 className="video-nav__header">next videos</h4>
-      {allVideos.map(video => {
+      {props.videos.map(video => {
           return (
-          <article className="video-nav__section" key={video.id}>
-          <img className="video-nav__image" src={video.image} />
-            <div className="video-nav__info">
-              <p className="video-nav__title">{video.title}</p>
-              <p className="video-nav__channel">{video.channel}</p>
-            </div>
-          </article>
+          <VideoNavItem 
+          key={video.id}
+          id={video.id}
+          title={video.title}
+          image={video.image}
+          channel={video.channel}
+          onVideoSelect={props.onVideoSelect}
+          />
           )
       })}
-      </div>
+      </ul>
   );
 };
 
-export default SuggestedVideos;
+export default VideoNav;
