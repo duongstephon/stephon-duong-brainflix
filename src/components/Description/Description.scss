@@ -34,13 +34,6 @@
         }
     }
 
-    &__views-likes-box {
-        display: flex;
-        align-items: center;
-        color: variables.$brainflix-silver;
-        margin: 0rem 0rem 1rem 0rem;
-    }
-
     &__small-section {
         width: 100%;
         display: flex;
@@ -69,8 +62,24 @@
         color: variables.$brainflix-silver;
     }
 
-    &__info {
-        margin: 0;
+    &__views {
+        color: variables.$brainflix-silver;
+        margin: 0rem 0rem 1rem 0rem;
+        
+        &::before {
+            content: url('../../assets/icons/views.svg');
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__likes {
+        color: variables.$brainflix-silver;
+        margin: 0rem 0rem 1rem 0rem;
+        
+        &::before {
+            content: url('../../assets/icons/likes.svg');
+            margin-right: 0.5rem;
+        }
     }
 
     &__description {

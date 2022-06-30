@@ -5,6 +5,7 @@ const VideoNavItem = (props) => {
     const handleNewVideoSelect = e => {
         e.preventDefault();
         props.onVideoSelect(props.id)
+        
     }
     return (
         <li className="video-nav__section" onClick={handleNewVideoSelect} key={props.id}>
