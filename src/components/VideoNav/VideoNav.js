@@ -6,7 +6,7 @@ const VideoNav = (props) => {
 
   return (
     <ul className="video-nav"> 
-    <h4 className="video-nav__header">next videos</h4>
+    <h3 className="video-nav__header">next videos</h3>
       {props.videos.map(video => {
           return (
           <VideoNavItem 
