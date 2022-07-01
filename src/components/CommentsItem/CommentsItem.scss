@@ -6,9 +6,8 @@
     @include mixins.comment-section-layout;
 
     @include mixins.tablet {
-        width: 80%;
-        margin: auto;
-        margin-bottom: 2rem;
+        margin: 0rem 0rem 2rem 0rem;
+        padding: 0rem 0rem 1rem 0rem;
     }
 
     @include mixins.desktop {
@@ -16,9 +15,9 @@
     }
 
     &__image {
-        width: 2.25rem;
-        height: 2.25rem;
-        margin: 1.5rem 1rem 0rem 0rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        margin: 0rem 1rem 0rem 0rem;
         border-radius: 50%;
         object-fit: cover;
         object-position: 20% 0;
@@ -45,11 +44,26 @@
         }
     }
 
-    &__title-date {
+    &__name-date {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 0.2rem 0rem 0rem 0rem;
+    }
+
+    &__name {
+        font-weight: 600;
+        margin: 0rem;
+    }
+
+    &__date {
+        color: variables.$brainflix-silver;
+        margin: 0rem;
+    }
+
+    &__comment {
+        line-height: 1.4rem;
+        margin: 0.7rem 0rem 1rem 0rem;
     }
 }

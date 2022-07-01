@@ -6,11 +6,14 @@ import CommentsItem from '../CommentsItem/CommentsItem';
 const Comments = (props) => {
   return (
     <div className="comments">
-      <article>
+    <h3>{props.current.comments.length} Comments</h3>
+      <article className="comments__input-section">
         <img className="comments__image" src={avatarImage} alt="avatar"/>
         <div className="comments__box">
-          <h4>join the conversation</h4>
-          <textarea className="comments__input" type="text" rows="4" placeholder="Add a new comment"/>
+          <div className="comments__tablet-input-display">
+          <h3 className="comments__header">join the conversation</h3>
+          <textarea className="comments__input" type="text" placeholder="Add a new comment"/>
+          </div>
           <button className="comments__button">comment</button>
         </div>
       </article>
