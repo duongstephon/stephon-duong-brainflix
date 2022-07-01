@@ -6,7 +6,7 @@
     padding: 0rem 1rem;
 
     @include mixins.tablet {
-        padding: 0rem 2.25rem;
+        padding: 0rem 2.25rem 0.5rem 2.25rem;
     }
 
     &__title {
@@ -18,14 +18,16 @@
         @include mixins.tablet {
             border-bottom: none;
             padding: 0rem;
+            margin: 2rem 0rem 0rem 0rem;
         }
     }
 
     &__box {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         border-bottom: solid 2px variables.$brainflix-mercury;
-        padding: 1.5rem 0rem 0rem 0rem;
+        padding: 1rem 0rem 0rem 0rem;
 
         @include mixins.tablet {
             justify-content: space-between;
@@ -33,14 +35,14 @@
     }
 
     &__small-section {
-        width: 100%;
+        width: 47%;
         display: flex;
         flex-direction: column;
-        inline-size: 14rem;
 
         @include mixins.tablet {
             flex-direction: row;
             justify-content: space-between;
+            inline-size: 14rem;
         }
     }
 
