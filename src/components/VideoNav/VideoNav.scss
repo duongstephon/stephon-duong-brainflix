@@ -7,42 +7,20 @@
     list-style-type: none;
 
     @include mixins.tablet {
-        padding: 1.5rem 2.25rem;
+        padding: 0rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        padding: 0rem 0rem 0rem 1rem;
     }
 
     &__header {
         text-transform: uppercase;
         color: variables.$brainflix-silver;
         font-weight: 600;
-    }
 
-    &__section {
-        display: flex;
-        align-items: center;
-        margin: 0rem 0rem 1rem 0rem;
-    }
-
-    &__image {
-        width: 100%;
-        height: 5rem;
-        border-radius: 6px;
-        inline-size: 8rem;
-        margin-right: 1rem;
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__title {
-        inline-size: 14rem;
-        margin: 0rem 0rem 0.5rem 0rem;
-        font-weight: 600;
-    }
-
-    &__channel {
-        inline-size: 14rem;
-        margin: 0;
+        @include mixins.tablet {
+            margin: 0rem 0rem 2rem 0rem;
+        }
     }
 }

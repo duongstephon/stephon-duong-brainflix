@@ -1,7 +1,6 @@
 import React from 'react';
 import './Description.scss';
-import viewsImg from '../../assets/icons/views.svg'
-import likesImg from '../../assets/icons/likes.svg'
+
 
 const Description = (props) => {
   const { title, channel, timestamp, views, likes, id, description } = props.current;

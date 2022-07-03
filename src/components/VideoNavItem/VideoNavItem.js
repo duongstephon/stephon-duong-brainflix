@@ -1,3 +1,5 @@
+import './VideoNavItem.scss'
+
 import React from 'react';
 
 const VideoNavItem = (props) => {
@@ -8,11 +10,11 @@ const VideoNavItem = (props) => {
         
     }
     return (
-        <li className="video-nav__section" onClick={handleNewVideoSelect} key={props.id}>
-        <img className="video-nav__image" src={props.image} />
-        <div className="video-nav__info">
-            <p className="video-nav__title">{props.title}</p>
-            <p className="video-nav__channel">{props.channel}</p>
+        <li className="video-item" onClick={handleNewVideoSelect} key={props.id}>
+        <img className="video-item__image" src={props.image} alt="video thumbnail"/>
+        <div className="video-item__info">
+            <p className="video-item__title">{props.title}</p>
+            <p className="video-item__channel">{props.channel}</p>
         </div>
         </li>
     );

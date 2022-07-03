@@ -35,8 +35,8 @@ class MainPage extends React.Component {
       return (
         <div>
           <DisplayedVideo current={this.state.currentVideo}/>
-          <section>
-            <div>
+          <section className="main-page">
+            <div className="main-page__info-comments">
               <Description current={this.state.currentVideo} handleDate={this.handleDate}/>
               <Comments current={this.state.currentVideo} handleDate={this.handleDate}/>
             </div>
