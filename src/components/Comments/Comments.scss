@@ -18,6 +18,10 @@
         align-items: flex-start;
         border-bottom: solid 2px variables.$brainflix-mercury;
         width: 100%;
+
+        @include mixins.desktop {
+            border-bottom: none;
+        }
     }
 
     &__header {

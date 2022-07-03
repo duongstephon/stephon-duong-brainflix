@@ -12,6 +12,8 @@
     @include mixins.desktop {
         margin: 0;
         padding: 1.5rem 1rem 1.5rem 0rem;
+        border-bottom: none;
+        border-top: solid 2px variables.$brainflix-mercury;
     }
 
     &__image {
