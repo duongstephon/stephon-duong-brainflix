@@ -1,0 +1,35 @@
+@use '../../styles/partials/variables.scss';
+
+@mixin tablet {
+    @media (min-width: variables.$tablet-screen) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: variables.$desktop-screen) {
+        @content;
+    }
+}
+
+@mixin uploadButton {
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    margin: 1rem;
+    background-color: variables.$brainflix-blue;
+    color: variables.$brainflix-white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem 0rem;
+}
+
+@mixin comment-section-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: solid 2px #E1E1E1;
+    width: 100%;
+    padding: 1rem 0rem;
+}

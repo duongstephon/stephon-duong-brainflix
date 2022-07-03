@@ -1,0 +1,77 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.posted-comments {
+    @include mixins.comment-section-layout;
+
+    @include mixins.tablet {
+        padding: 2rem 0rem;
+    }
+
+    @include mixins.desktop {
+        margin: 0;
+        padding: 1.5rem 1rem 1.5rem 0rem;
+        border-bottom: none;
+        border-top: solid 2px variables.$brainflix-mercury;
+    }
+
+    &__image {
+        width: 2.8rem;
+        height: 2.8rem;
+        margin: 0rem 1rem 0rem 0rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 20% 0;
+
+        @include mixins.tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        @include mixins.desktop {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 2rem;
+        }
+
+        &--posted {
+            margin-top: 0;
+        }
+    }
+
+    &__posted {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        width: 100%;
+
+        @include mixins.tablet {
+            font-size: 1rem;
+        }
+    }
+
+    &__name-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.2rem 0rem 0rem 0rem;
+    }
+
+    &__name {
+        font-weight: 600;
+        margin: 0rem;
+    }
+
+    &__date {
+        color: variables.$brainflix-silver;
+        margin: 0rem;
+    }
+
+    &__comment {
+        line-height: 1.4rem;
+        margin: 0.7rem 0rem 0rem 0rem;
+    }
+}

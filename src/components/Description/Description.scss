@@ -1,0 +1,107 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.description {
+    padding: 0rem 1rem;
+
+    @include mixins.tablet {
+        padding: 0rem 2.25rem 0.5rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        padding: 0rem;
+    }
+
+    &__title {
+        color: variables.$brainflix-black;
+        padding: 1rem 0rem;
+        border-bottom: solid 2px variables.$brainflix-mercury;
+        margin: 0rem;
+
+        @include mixins.tablet {
+            border-bottom: none;
+            padding: 0rem;
+            margin: 2rem 0rem 0rem 0rem;
+        }
+
+        @include mixins.desktop {
+            padding-right: 1rem;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 2px variables.$brainflix-mercury;
+        padding: 1rem 0rem 0rem 0rem;
+
+        @include mixins.tablet {
+            justify-content: space-between;
+        }
+
+        @include mixins.desktop {
+            padding-right: 1rem;
+        }
+    }
+
+    &__small-section {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+
+        @include mixins.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            inline-size: 14rem;
+        }
+    }
+
+    &__channel {
+        color: variables.$brainflix-black;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    &__image {
+        margin-right: 0.5rem;
+    }
+
+    &__date {
+        margin: 0rem 0rem 1rem 0rem;
+        color: variables.$brainflix-silver;
+    }
+
+    &__views {
+        color: variables.$brainflix-silver;
+        margin: 0rem 0rem 1rem 0rem;
+        
+        &::before {
+            content: url('../../assets/icons/views.svg');
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__likes {
+        color: variables.$brainflix-silver;
+        margin: 0rem 0rem 1rem 0rem;
+        
+        &::before {
+            content: url('../../assets/icons/likes.svg');
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__description {
+        line-height: 1.4rem;
+
+        @include mixins.tablet {
+            margin: 1.8rem 0rem;
+        }
+
+        @include mixins.desktop {
+            padding-right: 1rem;
+        }
+    }
+
+}

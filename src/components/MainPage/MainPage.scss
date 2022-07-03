@@ -1,0 +1,15 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+
+.main-page {
+    @include mixins.desktop{
+        display: flex;
+        margin: 0rem 7rem;
+    
+        &__info-comments {
+            border-right: solid 2px variables.$brainflix-mercury;
+        }
+    }
+}
