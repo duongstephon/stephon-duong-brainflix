@@ -3,17 +3,20 @@
 @use '../../styles/partials/global.scss' as *;
 
 .comments {
-    margin: 0rem 1rem;
+    margin: 0rem 1rem 1.5rem 1rem;
 
     @include mixins.tablet {
-        margin: 0rem 2.25rem;
+        margin: 0rem 2.25rem 2rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        margin: 3rem 0rem 0rem 0rem;
     }
 
     &__input-section {
         display: flex;
         align-items: flex-start;
         border-bottom: solid 2px variables.$brainflix-mercury;
-        margin-bottom: 1rem;
         width: 100%;
     }
 
@@ -37,6 +40,12 @@
             height: 3rem;
         }
 
+        @include mixins.desktop {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 2rem;
+        }
+
         &--posted {
             margin-top: 0;
         }
@@ -51,6 +60,10 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+        }
+
+        @include mixins.desktop {
+            padding-right: 1rem;
         }
     }
 
@@ -97,6 +110,10 @@
         @include mixins.tablet {
             margin: 0rem 0rem 0.5rem 0rem;
             width: 25%;
+        }
+
+        @include mixins.tablet {
+            font-size: 0.8rem;
         }
     }
 }

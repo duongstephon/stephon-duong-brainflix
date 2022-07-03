@@ -1,3 +1,50 @@
 @use '../../styles/partials/mixins.scss';
 @use '../../styles/partials/variables.scss';
 @use '../../styles/partials/global.scss' as *;
+
+.video-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 0rem 0rem 1rem 0rem;
+
+    @include mixins.tablet {
+        margin-bottom: 1.8rem;
+    }
+
+    
+
+    &__image {
+        width: 100%;
+        height: 5rem;
+        border-radius: 6px;
+        inline-size: 8rem;
+        margin-right: 1rem;
+
+        @include mixins.tablet {
+            inline-size: 9rem;
+            height: 5.5rem;
+        }
+
+        @include mixins.desktop {
+            inline-size: 8rem;
+            height: 5rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.3rem;
+    }
+
+    &__title {
+        inline-size: 14rem;
+        margin: 0rem 0rem 1rem 0rem;
+        font-weight: 600;
+    }
+
+    &__channel {
+        inline-size: 14rem;
+        margin: 0;
+    }
+}
