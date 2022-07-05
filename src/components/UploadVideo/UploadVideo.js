@@ -1,12 +1,12 @@
 import React from 'react';
 import UploadVideoPreview from '../../assets/images/Upload-video-preview.jpg'
-
+import './UploadVideo.scss'
 
 const UploadVideo = () => {
     return (
-        <div>
-            <h3>video thumbnail</h3>
-            <img src={UploadVideoPreview} alt="preview video thumbnail" />
+        <div className='upload-video'>
+            <h3 className="upload-video__header">video thumbnail</h3>
+            <img className='upload-video__thumbnail' src={UploadVideoPreview} alt="preview video thumbnail" />
         </div>
     );
 };

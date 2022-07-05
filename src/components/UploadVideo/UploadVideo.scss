@@ -1,0 +1,24 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.upload-video {
+background-color: variables.$brainflix-white;
+
+    &__header {
+        margin: 1rem 0rem 0.2rem 0rem;
+    }
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: 6px;
+
+        @include mixins.tablet {
+            width: 50%;
+        }
+
+        @include mixins.desktop {
+            width: 40%;
+        }
+    }
+}

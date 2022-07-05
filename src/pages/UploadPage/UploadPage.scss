@@ -5,4 +5,13 @@
 .upload-page {
     border-top: solid 2px variables.$brainflix-mercury;
     padding: 0rem 1rem;
+
+    @include mixins.tablet {
+        padding: 0rem 2.25rem;
+    }
+
+    &__header {
+        margin: 2rem 0rem;
+        font-weight: 600;
+    }
 }

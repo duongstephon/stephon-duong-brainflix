@@ -8,14 +8,12 @@ import UploadPage from './pages/UploadPage/UploadPage';
 
 function App() {
   return (
-    <Router>
-    <div className="App">
+    <Router className="App">
       <Header />
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/upload" exact component={UploadPage} />
+        <Route path="/upload" component={UploadPage} />
       </Switch>
-    </div>
     </Router>
   );
 }

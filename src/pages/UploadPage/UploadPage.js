@@ -7,7 +7,7 @@ export default class UploadPage extends Component {
   render() {
     return (
       <div className="upload-page">
-        <h1>Upload Video</h1>
+        <h1 className='upload-page__header'>Upload Video</h1>
         <UploadVideo />
         <UploadInfo />
       </div>

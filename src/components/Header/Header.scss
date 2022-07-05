@@ -72,12 +72,15 @@
         @include mixins.tablet {
             display: inline;
             @include mixins.uploadButton;
-            width: 15rem;
             margin: 1rem;
         }
 
         @include mixins.desktop {
             margin: 1rem 2rem;
         }
+    }
+
+    &__link {
+        width: 100%;
     }
 }

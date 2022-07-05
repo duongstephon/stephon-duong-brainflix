@@ -25,9 +25,6 @@
     }
 
     &__header {
-        text-transform: uppercase;
-        color: variables.$brainflix-silver;
-        font-weight: 600;
         margin: 0rem 0rem 0.5rem 0rem;
     }
 
@@ -119,5 +116,10 @@
         @include mixins.tablet {
             font-size: 0.8rem;
         }
+    }
+
+    &__total-comments {
+        color: variables.$brainflix-black;
+        text-transform: none;
     }
 }
