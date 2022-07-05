@@ -1,0 +1,8 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.upload-page {
+    border-top: solid 2px variables.$brainflix-mercury;
+    padding: 0rem 1rem;
+}

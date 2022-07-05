@@ -1,14 +1,14 @@
 import React from 'react';
-import './MainPage.scss';
+import './HomePage.scss';
 import videoDetailsData from '../../data/video-details.json';
 import videosData from '../../data/videos.json';
-import DisplayedVideo from '../DisplayedVideo/DisplayedVideo';
-import Description from '../Description/Description';
-import Comments from '../Comments/Comments'
-import VideoNav from '../VideoNav/VideoNav';
+import DisplayedVideo from '../../components/DisplayedVideo/DisplayedVideo';
+import Description from '../../components/Description/Description';
+import Comments from '../../components/Comments/Comments'
+import VideoNav from '../../components/VideoNav/VideoNav';
 
 // const filteredVideos = 
-class MainPage extends React.Component {
+class HomePage extends React.Component {
   state = {
       allVideos: videosData,
       currentVideo: videoDetailsData[0]
@@ -35,8 +35,8 @@ class MainPage extends React.Component {
       return (
         <div>
           <DisplayedVideo current={this.state.currentVideo}/>
-          <section className="main-page">
-            <div className="main-page__info-comments">
+          <section className="home-page">
+            <div className="home-page__info-comments">
               <Description current={this.state.currentVideo} handleDate={this.handleDate}/>
               <Comments current={this.state.currentVideo} handleDate={this.handleDate}/>
             </div>
@@ -51,4 +51,4 @@ class MainPage extends React.Component {
   };
 }
 
-export default MainPage;
+export default HomePage;
