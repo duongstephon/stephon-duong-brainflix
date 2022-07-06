@@ -4,6 +4,10 @@
 
 
 .upload-info {
+    @include mixins.desktop {
+        width: 100%;
+        margin: 0rem 0rem 0rem 1.5rem;
+    }
 
     &__header {
         margin: 1rem 0rem 0.2rem 0rem;
@@ -30,30 +34,10 @@
 
         &--video-description {
             height: 7rem;
+
+            @include mixins.desktop {
+                height: 6.5rem;
+            }
         }
-    }
-
-    &__nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__button {
-        background: url('../../assets/icons/publish.svg') no-repeat scroll 10px 10px;
-        @include mixins.uploadButton;
-        align-items: center;
-        font-weight: 600;
-        font-size: 0.9rem;
-        margin-bottom: 0rem;
-    }
-
-    &__cancel {
-        text-decoration: none;
-        color: variables.$brainflix-blue;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        margin: 2rem;
-        font-weight: 600;
     }
 }

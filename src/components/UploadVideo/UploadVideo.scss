@@ -3,7 +3,11 @@
 @use '../../styles/partials/global.scss' as *;
 
 .upload-video {
-background-color: variables.$brainflix-white;
+    background-color: variables.$brainflix-white;
+
+    @include mixins.desktop {
+        width: 35rem;
+    }
 
     &__header {
         margin: 1rem 0rem 0.2rem 0rem;
@@ -18,7 +22,8 @@ background-color: variables.$brainflix-white;
         }
 
         @include mixins.desktop {
-            width: 40%;
+            width: 100%;
+            height: 13rem;
         }
     }
 }

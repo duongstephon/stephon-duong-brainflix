@@ -1,0 +1,42 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.upload-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mixins.tablet {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    &__button {
+        background: url('../../assets/icons/publish.svg') no-repeat scroll 10px 10px;
+        @include mixins.uploadButton;
+        align-items: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0rem;
+
+        @include mixins.tablet {
+            width: 12rem;
+        }
+    }
+
+    &__cancel {
+        text-decoration: none;
+        color: variables.$brainflix-blue;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        margin: 2rem;
+        font-weight: 600;
+
+        @include mixins.tablet {
+            margin: 1rem 6rem 0rem 0rem;
+
+        }
+    }
+}
