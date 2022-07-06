@@ -1,0 +1,43 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+
+.upload-info {
+    @include mixins.desktop {
+        width: 100%;
+        margin: 0rem 0rem 0rem 1.5rem;
+    }
+
+    &__header {
+        margin: 1rem 0rem 0.2rem 0rem;
+    }
+
+    &__typable {
+        font-family: variables.$brainflix-avenir-font, sans-serif;
+        color: variables.$brainflix-darkblack;
+        font-size: 1rem;
+        font-weight: 500;
+        font-style: normal;
+        padding: 0.75rem;
+        background-color: #FAFAFA;
+        border: solid 2px variables.$brainflix-mercury;
+        border-radius: 6px;
+        width: 100%;
+        height: 3rem;
+        resize: none;
+        margin: 0rem 0rem 1rem 0rem;
+    
+        &:active {
+            border-color: variables.$brainflix-black;
+        }
+
+        &--video-description {
+            height: 7rem;
+
+            @include mixins.desktop {
+                height: 6.5rem;
+            }
+        }
+    }
+}

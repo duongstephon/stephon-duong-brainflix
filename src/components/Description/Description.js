@@ -10,7 +10,7 @@ const Description = (props) => {
       <h1 className="description__title">{title}</h1>
       <div className="description__box">
         <div className='description__small-section'>
-          <h3 className="description__channel">By {channel}</h3>
+          <p className="description__channel">By {channel}</p>
           <p className="description__date">{props.handleDate(timestamp)}</p>
         </div>
         <div className='description__small-section'>

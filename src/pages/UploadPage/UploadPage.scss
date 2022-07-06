@@ -1,0 +1,34 @@
+@use '../../styles/partials/mixins.scss';
+@use '../../styles/partials/variables.scss';
+@use '../../styles/partials/global.scss' as *;
+
+.upload-page {
+    border-top: solid 2px variables.$brainflix-mercury;
+    padding: 0rem 1rem;
+
+    @include mixins.tablet {
+        padding: 0rem 2.25rem;
+    }
+
+    @include mixins.desktop {
+        padding: 0rem 8rem;
+    }
+
+    &__header {
+        margin: 2rem 0rem;
+        font-weight: 600;
+    }
+
+    &__video-section {
+        @include mixins.tablet {
+            padding: 1.5rem 0rem 0rem 0rem;
+            border-top: solid 2px variables.$brainflix-mercury;
+            border-bottom: solid 2px variables.$brainflix-mercury;
+        }
+
+        @include mixins.desktop {
+            display: flex;
+            padding: 1.5rem 0rem 1.5rem 0rem
+        }
+    }
+}

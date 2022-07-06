@@ -6,7 +6,7 @@ import CommentsItem from '../CommentsItem/CommentsItem';
 const Comments = (props) => {
   return (
     <div className="comments">
-    <h3>{props.current.comments.length} Comments</h3>
+    <h3 className='comments__total-comments'>{props.current.comments.length} Comments</h3>
       <article className="comments__input-section">
         <img className="comments__image" src={avatarImage} alt="avatar"/>
         <div className="comments__box">

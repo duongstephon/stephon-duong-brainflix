@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
-import MainPage from './components/MainPage/MainPage';
+import HomePage from './pages/HomePage/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
+
 
 
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Header />
-      <MainPage />
-    </div>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/upload" component={UploadPage} />
+      </Switch>
+    </Router>
   );
 }
 

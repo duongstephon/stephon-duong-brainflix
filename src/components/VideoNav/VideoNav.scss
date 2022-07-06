@@ -15,10 +15,6 @@
     }
 
     &__header {
-        text-transform: uppercase;
-        color: variables.$brainflix-silver;
-        font-weight: 600;
-
         @include mixins.tablet {
             margin: 0rem 0rem 2rem 0rem;
         }
