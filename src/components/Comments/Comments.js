@@ -8,7 +8,7 @@ const Comments = (props) => {
 
   return (
     <div className="comments">
-    <h3 className='comments__total-comments'>Comments</h3>
+    <h3 className='comments__total-comments'>{props.comments?.length} Comments</h3>
       <article className="comments__input-section">
         <img className="comments__image" src={avatarImage} alt="avatar"/>
         <div className="comments__box">
