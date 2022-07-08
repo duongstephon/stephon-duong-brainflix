@@ -14,7 +14,7 @@ class HomePage extends React.Component {
   }
 
   getVideo = (id) => {
-    axios.get(`${api_url}videos/${id}/?api_key=${api_key}`)
+    axios.get(`${api_url}/videos/${id}?api_key=${api_key}`)
       .then((response) => {
         this.setState({
           currentVideo: response.data
@@ -23,7 +23,7 @@ class HomePage extends React.Component {
     }
   
   componentDidMount() {
-    axios.get(`${api_url}videos/?api_key=${api_key}`)
+    axios.get(`${api_url}/videos/?api_key=${api_key}`)
       .then(response => {
         this.setState({
           allVideos: response.data
@@ -34,10 +34,15 @@ class HomePage extends React.Component {
         });
   }
 
-  handleVideoSelect = id => {
-    this.setState({
-      currentVideo: this.state.allVideos.find(video => video.id === id)
-    })
+  componentDidUpdate(prevProps) {
+    const prevVideoId = prevProps.match.params.videoId
+    const currentVideoId = this.props.match.params.videoId
+
+    const videoIdToGet = currentVideoId || this.state.allVideos[0].id;
+
+    if (prevVideoId !== currentVideoId) {
+      this.getVideo(videoIdToGet)
+    }
   }
 
   handleDate = (time) => {
@@ -51,19 +56,18 @@ class HomePage extends React.Component {
 
   render() {
     const filteredVideos = this.state.allVideos.filter(video => video.id !== this.state.currentVideo.id)
-    
+
       return (
         <div>
           <DisplayedVideo current={this.state.currentVideo}/>
           <section className="home-page">
             <div className="home-page__info-comments">
               <Description current={this.state.currentVideo} handleDate={this.handleDate}/>
-              {/* <Comments current={this.state.currentVideo} handleDate={this.handleDate} /> */}
+              <Comments comments={this.state.currentVideo.comments} handleDate={this.handleDate} />
             </div>
             <VideoNav 
               current={this.state.currentVideo}
               videos={filteredVideos} 
-              onVideoSelect={this.handleVideoSelect}
               />
           </section>
         </div>
