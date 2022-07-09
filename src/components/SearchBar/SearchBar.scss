@@ -20,7 +20,7 @@
         background-color: #FAFAFA;
         border: solid 2px variables.$brainflix-mercury;
         border-radius: 6px;
-        width: 100%;
+        width: 19rem;
         height: 3rem;
         resize: none;
         background: url('../../assets/icons/search.svg') no-repeat scroll 10px 10px;
@@ -31,6 +31,8 @@
     
         @include mixins.tablet {
             padding: 1rem 2.5rem;
+            width: 16rem;
+            margin-left: 4rem;
         }
 
         @include mixins.desktop {

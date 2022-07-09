@@ -3,10 +3,10 @@ import './Description.scss';
 
 
 const Description = (props) => {
-  const { title, channel, timestamp, views, likes, id, description } = props.current;
+  const { title, channel, timestamp, views, likes, description } = props.current;
 
   return (
-    <section className="description" id={id}>
+    <section className="description">
       <h1 className="description__title">{title}</h1>
       <div className="description__box">
         <div className='description__small-section'>
