@@ -14,8 +14,6 @@ const CommentsItem = (props) => {
           </div>
           <p className="posted-comments__comment">{props.comment}</p>
         </div>
-
-        
     </article>
   );
 };
