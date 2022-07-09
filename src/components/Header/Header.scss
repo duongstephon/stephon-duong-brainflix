@@ -3,7 +3,7 @@
 @use '../../styles/partials/global.scss' as *;
 
 .header {
-    background-color: white;
+    background-color: variables.$brainflix-white;
     display: flex;
     flex-direction: column;
     align-items: center;
