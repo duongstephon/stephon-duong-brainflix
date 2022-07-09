@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className='header'>
-      <Link to='/' className='header__test'>
+      <Link to='/'>
         <img 
         className='header__logo'
         src={BrainFlixLogo}
@@ -15,7 +15,7 @@ const Header = () => {
       </Link>
       <div className='header__search'>
         <SearchBar />
-        <Link to="/upload">
+        <Link to="/upload" className='header__link'>
           <button className='header__tablet-button'>upload</button>
         </Link>
         <img

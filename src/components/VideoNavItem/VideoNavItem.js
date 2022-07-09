@@ -6,7 +6,7 @@ const VideoNavItem = (video) => {
 
     return (
         <Link to={"/video/" + video.id} className="video-item" key={video.id}>
-        <img className="video-item__image" src={video.image} alt=""/>
+        <img className="video-item__image" src={video.image} alt="thumbnail"/>
         <div className="video-item__info">
             <p className="video-item__title">{video.title}</p>
             <p className="video-item__channel">{video.channel}</p>
