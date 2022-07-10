@@ -21,7 +21,7 @@
 
     &__video-section {
         @include mixins.tablet {
-            padding: 1.5rem 0rem 0rem 0rem;
+            padding: 1rem 0rem 1.5rem 0rem;
             border-top: solid 2px variables.$brainflix-mercury;
             border-bottom: solid 2px variables.$brainflix-mercury;
         }
