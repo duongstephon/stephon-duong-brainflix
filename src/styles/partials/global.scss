@@ -27,13 +27,28 @@ h1 {
 
 h3 {
     font-size: 1rem;
+    text-transform: uppercase;
+    color: variables.$brainflix-silver;
+    font-weight: 600;
 
     @include mixins.tablet {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.2rem;
     }
 }
 
 p {
     font-size: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: variables.$brainflix-silver;
+    font-weight: 600;
+
+    @include mixins.tablet {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
 }

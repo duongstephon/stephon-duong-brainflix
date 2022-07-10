@@ -1,16 +1,16 @@
 import React from 'react';
 import './Description.scss';
 
-
+// Information of the video, including the title, channel likes and views
 const Description = (props) => {
-  const { title, channel, timestamp, views, likes, id, description } = props.current;
+  const { title, channel, timestamp, views, likes, description } = props.current;
 
   return (
-    <section className="description" id={id}>
+    <section className="description">
       <h1 className="description__title">{title}</h1>
       <div className="description__box">
         <div className='description__small-section'>
-          <h3 className="description__channel">By {channel}</h3>
+          <p className="description__channel">By {channel}</p>
           <p className="description__date">{props.handleDate(timestamp)}</p>
         </div>
         <div className='description__small-section'>

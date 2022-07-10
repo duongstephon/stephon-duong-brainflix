@@ -11,16 +11,16 @@
     }
 
     @include mixins.desktop {
-        padding: 0rem 0rem 0rem 1rem;
+        padding: 0rem 0rem 0rem 2rem;
     }
 
     &__header {
-        text-transform: uppercase;
-        color: variables.$brainflix-silver;
-        font-weight: 600;
-
         @include mixins.tablet {
             margin: 0rem 0rem 2rem 0rem;
+        }
+
+        @include mixins.desktop {
+            margin: 2rem 0rem 1rem 0rem;
         }
     }
 }

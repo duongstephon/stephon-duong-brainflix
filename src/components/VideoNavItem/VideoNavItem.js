@@ -1,22 +1,19 @@
 import './VideoNavItem.scss'
-
+import { Link } from 'react-router-dom';
 import React from 'react';
 
-const VideoNavItem = (props) => {
+//Individual next videos
+const VideoNavItem = (video) => {
+    const { id, image, title, channel } = video;
 
-    const handleNewVideoSelect = e => {
-        e.preventDefault();
-        props.onVideoSelect(props.id)
-        
-    }
     return (
-        <li className="video-item" onClick={handleNewVideoSelect} key={props.id}>
-        <img className="video-item__image" src={props.image} alt="video thumbnail"/>
+        <Link to={"/video/" + id} className="video-item" key={id}>
+        <img className="video-item__image" src={image} alt={title}/>
         <div className="video-item__info">
-            <p className="video-item__title">{props.title}</p>
-            <p className="video-item__channel">{props.channel}</p>
+            <p className="video-item__title">{title}</p>
+            <p className="video-item__channel">{channel}</p>
         </div>
-        </li>
+        </Link>
     );
 };
 

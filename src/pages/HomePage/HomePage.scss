@@ -3,7 +3,7 @@
 @use '../../styles/partials/global.scss' as *;
 
 
-.main-page {
+.home-page {
     @include mixins.desktop{
         display: flex;
         margin: 0rem 7rem;

@@ -3,7 +3,7 @@
 @use '../../styles/partials/global.scss' as *;
 
 .header {
-    background-color: white;
+    background-color: variables.$brainflix-white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,22 +11,29 @@
     margin: 0rem 1rem;
 
     @include mixins.tablet {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0rem 2.25rem;
+        margin: 0.5rem 2.25rem 0rem 2.25rem;
     }
 
     @include mixins.desktop {
-        margin: 0rem auto;
-        justify-content: space-evenly;
+        margin: 0rem 8rem;
+        justify-content: space-between;
     }
 
     &__logo {
         width: 9rem; 
-        margin: 1rem;
+        margin: 1rem 0rem 1rem 1rem;
 
         @include mixins.tablet {
             margin: 1.5rem 0rem;
+            width: 8.5rem;
+        }
+
+        @include mixins.desktop {
+            width: 9rem;
+            margin-right: 8rem;
         }
     }
 
@@ -49,9 +56,12 @@
         align-items: center;
 
         @include mixins.tablet {
-            width: 65%;
             margin: 0.5rem 0rem;
             justify-content: flex-end;
+        }
+
+        @include mixins.desktop {
+            margin-left: 8.7rem;
         }
     }
 
@@ -59,6 +69,7 @@
         background: url('../../assets/icons/upload.svg') no-repeat scroll 10px 10px;
         @include mixins.uploadButton;
         align-items: center;
+        font-weight: 600;
 
         @include mixins.tablet {
             display: none;
@@ -72,12 +83,23 @@
         @include mixins.tablet {
             display: inline;
             @include mixins.uploadButton;
-            width: 15rem;
             margin: 1rem;
+            width: 10rem;
+            font-weight: 600;
         }
 
         @include mixins.desktop {
             margin: 1rem 2rem;
+            width: 11rem;
         }
+    }
+
+    &__link {
+        width: 100%;
+        text-decoration: none;
+    }
+
+    &__test {
+        width: 100%;
     }
 }
