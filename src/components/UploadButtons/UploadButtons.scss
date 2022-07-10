@@ -14,6 +14,14 @@
     }
 
     &__button {
+        width: 100%;
+
+        @include mixins.tablet {
+            width: 12rem;
+        }
+    }
+
+    &__publish {
         background: url('../../assets/icons/publish.svg') no-repeat scroll 10px 10px;
         @include mixins.uploadButton;
         align-items: center;
@@ -22,7 +30,7 @@
         margin-bottom: 0rem;
 
         @include mixins.tablet {
-            width: 12rem;
+            width: 100%;
         }
     }
 
