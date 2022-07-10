@@ -1,6 +1,7 @@
 import React from 'react';
 import './DisplayedVideo.scss'
 
+//Hero video
 const Video = (props) => {
     return (
         <div className='hero'>

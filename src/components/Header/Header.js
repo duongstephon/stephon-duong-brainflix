@@ -4,6 +4,7 @@ import AvatarImg from '../../assets/images/Mohan-muruge.jpg'
 import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 
+//Header Section
 const Header = () => {
   return (
     <header className='header'>

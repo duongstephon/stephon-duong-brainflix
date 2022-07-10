@@ -2,6 +2,7 @@ import React from 'react';
 import UploadVideoPreview from '../../assets/images/Upload-video-preview.jpg'
 import './UploadVideo.scss'
 
+//Uploaded Video thumbnail
 const UploadVideo = () => {
     return (
         <div className='upload-video'>

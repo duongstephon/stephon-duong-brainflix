@@ -2,14 +2,16 @@ import './VideoNavItem.scss'
 import { Link } from 'react-router-dom';
 import React from 'react';
 
+//Individual next videos
 const VideoNavItem = (video) => {
+    const { id, image, title, channel } = video;
 
     return (
-        <Link to={"/video/" + video.id} className="video-item" key={video.id}>
-        <img className="video-item__image" src={video.image} alt="thumbnail"/>
+        <Link to={"/video/" + id} className="video-item" key={id}>
+        <img className="video-item__image" src={image} alt={title}/>
         <div className="video-item__info">
-            <p className="video-item__title">{video.title}</p>
-            <p className="video-item__channel">{video.channel}</p>
+            <p className="video-item__title">{title}</p>
+            <p className="video-item__channel">{channel}</p>
         </div>
         </Link>
     );

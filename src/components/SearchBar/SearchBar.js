@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.scss';
 
+//Search bar in Header
 const SearchBar = () => {
     return (
         <form className='searchbar'>

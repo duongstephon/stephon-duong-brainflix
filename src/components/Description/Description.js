@@ -1,7 +1,7 @@
 import React from 'react';
 import './Description.scss';
 
-
+// Information of the video, including the title, channel likes and views
 const Description = (props) => {
   const { title, channel, timestamp, views, likes, description } = props.current;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './UploadButtons.scss';
 import { Link } from 'react-router-dom';
 
+//Publish and cancel buttons
 class UploadButtons extends React.Component {
 
   handleUpload = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import './VideoNav.scss'
 import VideoNavItem from '../VideoNavItem/VideoNavItem';
 
+//Next videos section
 const VideoNav = (props) => {
 
   return (
