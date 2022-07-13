@@ -5,7 +5,7 @@ import Description from '../../components/Description/Description';
 import Comments from '../../components/Comments/Comments'
 import VideoNav from '../../components/VideoNav/VideoNav';
 import axios from 'axios';
-import { api_url, api_key } from '../../utils';
+import { api_url } from '../../utils';
 
 class HomePage extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class HomePage extends React.Component {
   }
 
   getVideo = (id) => {
-    axios.get(`${api_url}/videos/${id}?api_key=${api_key}`)
+    axios.get(`${api_url}/videos/${id}`)
       .then((response) => {
         this.setState({
           currentVideo: response.data
@@ -23,7 +23,7 @@ class HomePage extends React.Component {
     }
   
   componentDidMount() {
-    axios.get(`${api_url}/videos/?api_key=${api_key}`)
+    axios.get(`${api_url}/videos`)
       .then(response => {
         this.setState({
           allVideos: response.data
