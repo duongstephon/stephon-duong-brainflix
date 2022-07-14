@@ -12,9 +12,7 @@ class UploadButtons extends React.Component {
   render() {
     return (
       <div className='upload-buttons'>
-      <Link to='/' className='upload-buttons__button' onClick={this.handleUpload}>
-        <button className='upload-buttons__publish'>publish</button>
-      </Link>
+        <button type='submit' className='upload-buttons__publish' onClick={this.handleUpload}>publish</button>
         <Link to="/" className='upload-buttons__cancel'>cancel</Link>     
       </div>
     );

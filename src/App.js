@@ -8,7 +8,7 @@ import UploadPage from './pages/UploadPage/UploadPage';
 
 function App() {
   return (
-    <Router className="App">
+    <Router>
       <Header />
       <Switch>
         <Route path="/" exact component={HomePage} />
