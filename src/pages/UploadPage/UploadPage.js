@@ -27,7 +27,8 @@ class UploadPage extends Component {
       timestamp: new Date(Date.now()),
       comments: []
     })
-    .then((response) => {
+    .then(() => {
+      this.props.history.push('/')
     })
   }
 
