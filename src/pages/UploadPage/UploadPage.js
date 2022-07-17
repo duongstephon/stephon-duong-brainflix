@@ -12,24 +12,37 @@ class UploadPage extends Component {
     description: '',
   }
 
+  isValidForm = () => {
+    if (!this.state.title || !this.state.description) {
+      return false
+    }
+    return true
+  }
+
   addVideo = (event) => {
     event.preventDefault();
 
-    axios.post(`${api_url}/videos`, {
-      title: this.state.title,
-      description: this.state.description,
-      image: '/images/Upload-video-preview.jpg',
-      channel: 'Stephon',
-      views: 0,
-      likes: 0,
-      video: "https://project-2-api.herokuapp.com/stream",
-      duration: "4:01",
-      timestamp: new Date(Date.now()),
-      comments: []
-    })
-    .then(() => {
-      this.props.history.push('/')
-    })
+    if (this.isValidForm()) {
+      axios.post(`${api_url}/videos`, {
+        title: this.state.title,
+        description: this.state.description,
+        image: '/images/Upload-video-preview.jpg',
+        channel: 'Stephon',
+        views: 0,
+        likes: 0,
+        video: "https://project-2-api.herokuapp.com/stream",
+        duration: "4:01",
+        timestamp: new Date(Date.now()),
+        comments: []
+      })
+      .then(() => {
+        alert("Your video has been uploaded!");
+        this.props.history.push('/')
+      })
+      .catch((error) => console.log(error));
+    } else {
+      alert("Please have all fields filled out before submitting.")
+    }
   }
 
   handleChange = (event) => {

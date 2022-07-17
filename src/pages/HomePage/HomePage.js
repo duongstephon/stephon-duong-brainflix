@@ -58,6 +58,7 @@ class HomePage extends React.Component {
     const filteredVideos = this.state.allVideos.filter(video => video.id !== this.state.currentVideo.id)
 
       return (
+        (!this.state.currentVideo ? <p>Loading...</p> : 
         <div>
           <DisplayedVideo current={this.state.currentVideo}/>
           <section className="home-page">
@@ -71,6 +72,7 @@ class HomePage extends React.Component {
               />
           </section>
         </div>
+        )
       );
   };
 }
