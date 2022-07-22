@@ -7,6 +7,9 @@ A replica video sharing app built from React. Main page has a displayed hero vid
 Second upload page can be accessed by the upload button page. On this page, a new video canbe posted using an axios POST request to the back-end API. Title and 
 description can be added to the video, other information, such as comments, likes and views are hardcoded. Publishing a video will redirect to the Main Page with new video added to right section
 
+Please see "duongstephon/stephon-duong-brainflix-api" to see back-end repository 
+
+
 ## Installation Instructions
 
 ### `npm i`
