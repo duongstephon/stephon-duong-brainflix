@@ -34,5 +34,7 @@ You may also see any lint errors in the console.
 ### Main Page in desktop width size
 ![image](https://user-images.githubusercontent.com/105663385/180336730-dcd03502-cada-46d7-9383-54b0f06187fb.png)
 
+
+
 ### Upload page
 ![image](https://user-images.githubusercontent.com/105663385/180337770-b2913b5f-846b-494b-969c-067165ff8a7b.png)
